@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Fall Solution</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    border:border-box;
+}
+
+header {
+    display: flex;
+    justify-content:baseline;
+    height: 80px;
+    width: 100%;
+    background-color: #1A237E;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.navbar ul {
+    list-style-type: none;
+    margin-bottom:20px ;
+    padding: 0;
+    margin-left: 250px;
+    overflow: hidden;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar h1 {
+    margin: 30px auto 30px 30px;
+    color: white;
+}
+
+
+.navbar a {
+    margin-top: 32px;
+    display: block;
+    color: rgb(255, 255, 255);
+    margin-right: 0%;
+    text-align: center;
+    padding:  20px;
+    font-size: small;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    border: 2px solid wheat;
+    box-sizing: content-box;
+    cursor: pointer;    
+}
+
+.logo {
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+}
+
+.doctor-text li {
+    margin-left: 10px;
+    color: #1A237E;
+}
+
+h1 {
+    line-height: normal;
+    margin-top: 28px;
+    margin-left: 15px;
+    font-size: xx-large;
+}
+
+body {
+    background-color: #CEF7FA;
+    /* background: linear-gradient(-45deg,#f0ebc0, #ff887b,#99e2ff,#f0ebc0); */
+    padding-top:1px ;
+    font-family:  sans-serif;
+}
+
+
+.doctor-container   {
+    background-color: white;
+    box-shadow:  5px 5px 5px #ffb1b1;
+    color: #1A237E;
+    margin: 20px 40px 20px 40px;
+    border-radius: 10px;
+    padding: 5px;
+    line-height: 30px;
+    overflow: hidden;
+}
+
+.doctor-container:hover {
+    box-shadow: 5px 5px 5px rgb(255, 219, 219);
+}
+.dr {
+    color: #990000;
+}
+.about-container {
+    background-color: #FFF;
+    box-shadow:  5px 5px 5px #f5ffd1;
+    margin: 20px 40px 20px 40px;
+    border-radius: 10px;
+    padding: 5px;
+    line-height: 30px;
+    overflow: hidden;
+}
+
+.about-container:hover {
+    box-shadow: 5px 10px 5px rgb(255, 255, 221);
+}
+
+.about {
+    color: #1A237E;
+}
+
+#about-us li  {
+    margin-left: 30px;
+
+}
+
+.service h3 {
+    margin-left: 30px;
+    color:#4CAF50;
+}
+
+.service p {
+    margin-left: 30px;
+     
+}
+
+.service {
+    margin-top: 5px;
+}
+
+.service-container {
+    background-color: #F5F5F5;
+    box-shadow:  5px 5px 5px #daffcbf8;
+    margin: 20px 40px 20px 40px;
+    border-radius: 10px;
+    padding: 5px;
+    line-height: 30px;
+    overflow: hidden;
+}
+
+.service-container:hover {
+    box-shadow: 10px 10px 10px 5px rgb(212, 255, 212);
+}
+
+.services {
+    color: #1A237E ;
+}
+
+.review-container {
+    background-color: #FFF;     
+    box-shadow:  5px 5px 5px rgb(255, 219, 234);
+    margin: 20px 40px 20px 40px;
+    border-radius: 10px;
+    padding: 5px;
+    line-height: 30px;    
+}
+
+.review-container:hover{
+   box-shadow: 10px 10px 10px 5px rgb(255, 197, 255);
+}
+
+blockquote {
+    margin-bottom: 3px;
+    height: auto;
+    width: auto;
+    margin-left: 30px;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-weight: 600;    
+    box-shadow: 4px 4px 10px grey;
+}
+
+
+
+.reviews {
+    color: #1A237E;
+}
+
+cite {
+    padding: 5px;
+    font-weight: 525;
+    margin-left: 90%;
+    margin-right: 0;
+    margin-top: 0.5px;
+    align-self:flex-end;
+    display: inline-block;
+}
+
+.product-container{
+    background-color: #0d1144;
+    box-shadow:  5px 5px 5px rgb(255, 220, 196);
+    margin: 10px 40px 20px 40px;
+    border-radius: 10px;
+    padding: 5px;
+    line-height: 30px;
+    overflow: hidden;
+}
+
+.product-container:hover{
+    box-shadow: 10px 10px 10px 5px rgb(77, 77, 107);
+}
+
+
+.products  {
+    color: #ffffff;
+}
+
+.products a {
+    text-decoration: none;
+}
+
+.product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    margin: 25px;    
+}
+
+.product h3 {
+    padding-left:5px ;
+    color: #4CAF50;
+}
+
+.product p{
+    color: rgb(255, 217, 146);
+}
+.product:hover {
+    box-shadow: 2px 2px 10px grey;
+}
+
+button a {
+    text-decoration: none;
+}
+
+button{
+    color: rgb(0, 26, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 80px;
+    width: 200px;
+    font-weight: 750;
+    background:linear-gradient(30deg,rgb(255, 217, 0),rgb(229, 226, 227));
+    border-radius: 5px;
+    border: transparent;
+    box-sizing: border-box;
+    margin-left: 5px;
+}
+
+.imgprdt {
+    filter: drop-shadow(5px 5px 5px #ffd2d2);
+    box-shadow: 5px 5px 40px rgb(255, 191, 191) transparent;
+    align-self: center;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+.topic {
+    margin:2px auto 5px 0;
+    font-family: 'Aboreto', system-ui;
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.doctor-content {
+    display: flex;
+    align-items: center;
+}
+
+.doctor-image {
+    width: 150px; 
+    height: 180px;
+    border: solid 2px #4CAF50; 
+    border-radius: 5%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+footer {
+    display: flex;
+    height: auto;
+    width: 100%;
+    line-height: 25px;
+    background-color: #314E70;
+    /* background:linear-gradient(45deg,#ffd1bf,#f8ffd6,#ffd7cd); */
+}
+
+footer p {
+    display: inline-block;
+}
+
+.social-icons {
+    display: inline;
+}
+.social-icons  h4 {
+    display: inline;
+}
+
+.social-icons i {
+    margin: 10px ;
+    display: inline;
+}
+
+
+.ftrimg{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+
+i {
+    size: 105px;
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        line-height: normal;
+        margin-top: 15px;
+        margin-left: 15px;
+        font-size: 35px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .doctor-container   {
+        height: auto;
+        width: 450px;
+    }
+
+    .navbar{
+        margin-left: 1000px;
+    }
+
+    header {
+        display: flex;
+
+
+    }
+
+    .doctor-image{
+            height: 150px;
+            width: 150px;
+            margin: 0;
+            align-self: flex-start;
+            border-radius: 50%;
+    }
+
+    .doctor-image p {
+        display: inline;
+    }
+    
+    .discription{
+        margin-left: 0;
+    }
+    .topic, .dr {
+        font-size: 20px;
+    }
+
+    .product {
+        margin-top: 5px;
+    }
+
+    .doctor-container, .review-container , .service-container,.about-container , .product-container{
+        height: auto;
+        width: 450px;
+        margin: 7px 10px 7px 10px;
+    }
+
+    blockquote {
+        margin-left: 0px;
+    }
+
+    cite {
+        margin-left: 58%;
+    }
+
+    .product {
+        display: flex;
+       flex-direction: column ;        
+    }
+
+    footer {
+        width: 480px;
+        height: auto;
+        }
+
+    .social-icons {
+        display: inline-block;
+    }
+
+    .social-icons:hover {
+        background-color:rgba(rgb(255, 0, 0), rgb(0, 255, 0), blue, 0.5);
+    }
+}
+  
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+        <div class="logo-container">
+            <img src="logo.jpg" alt="Company Logo" class="logo">
+        </div>
+        <h1>HAIR FALL HEADACHE</h1>
+        
+            <ul>
+                
+                <li><a href="#about-us-section">About Us</a></li>
+                <li><a href="#services-section">Services</a></li>
+                <li><a href="#reviews-section">Customer Reviews</a></li>
+                <li><a href="#products-section">Products</a></li>
+                <li><a href="#contact-section">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+        <section id="doctor-section">
+            <div class="doctor-container">
+                <div class="doctor-content">
+                    <img src="fdoctor.avif" alt="Doctor Image" class="doctor-image">
+                    <div class="doctor-text">
+                        <h2 class="dr">Dr. Nagar Siro Namah</h2>
+                        <p>Experienced and dedicated, Dr. Namah specializes in treating hair fall, headache, and alopecia.</p>
+                        <ul>
+                            <li class="discription">Board-certified specialist in trichology</li>
+                            <li class="discription">Over 15 years of clinical experience</li>
+                            <li class="discription">Pioneered innovative treatments for hair restoration</li>
+                            <li class="discription">Committed to patient education and well-being</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-us-section">
+            <div class="about-container">
+                <h2 class="topic about">About Us</h2>
+                <section id="about-us">
+                    <span>
+                    <ul>
+                        <li><strong>Your Hair Partner:</strong> HairRevive is dedicated to achieving healthier, fuller hair.</li>
+                        <li><strong>Our Mission:</strong> We empower confidence through innovative solutions and personalized expert sessions.</li>
+                        <li><strong>Expert Care:</strong> Our experienced professionals tailor treatments to your unique needs.</li>
+                        <li><strong>Cutting-Edge:</strong> Stay ahead in hair care with HairRevive's latest treatments and consultations.</li>
+                        <li><strong>Join Us:</strong> Experience transformation and embrace your best self with HairRevive.</li>
+                    </ul>
+                    </span>
+                </section>
+                
+            </div>
+        </section>
+
+        <section id="services-section">
+            <div class="service-container">
+                <h2 class="topic services">Our Services</h2>
+                <span>
+                <div class="service">
+                    <ul>
+                        <li><h3>Personalized Hair Care Plans</h3></li>
+                    </ul>                    
+                    <p>Customized plans addressing your unique hair needs, promoting overall hair health.</p>
+                </div>
+                <div class="service">
+                    <h3>Expert Consultations</h3>
+                    <p>Guidance from experienced professionals to understand your concerns and provide personalized advice.</p>
+                </div>
+                <div class="service">
+                    <h3>Advanced Treatment Options</h3>
+                    <p>Explore the latest in hair loss treatments, including cutting-edge technologies and proven methodologies.</p>
+                </div>
+                </span>
+            </div>
+        
+        </section>
+
+        <section id="reviews-section">
+            <div class="review-container">
+                <h2 class="topic reviews">Customer Reviews</h2>
+                <span>
+                <div class="review first-review">
+                    <blockquote >
+                        <p >"HairRevive is a game-changer! The personalized care plans transformed my hair. The expert consultations are worth every penny!"</p>
+                        <cite>- Emily J.</cite>
+                    </blockquote>
+                </div>
+                
+                <div class="review">
+                    <blockquote>
+                        <p>"I've struggled with hair loss for years, but HairRevive's advanced treatments worked wonders. I can't believe the difference it made. Highly recommended!"</p>
+                        <cite>- Alex M.</cite>
+                    </blockquote>
+                </div>
+                
+                <div class="review">
+                    <blockquote>
+                        <p>"Exceptional service and results! The team at HairRevive goes above and beyond. My confidence is through the roof thanks to them!"</p>
+                        <cite>- Sarah L.</cite>
+                    </blockquote>
+                </div>
+                
+                <div class="review">
+                    <blockquote>
+                        <p>"HairRevive truly cares about their clients. The personalized approach made me feel valued, and the results speak for themselves. Thrilled with my experience!"</p>
+                        <cite>- Daniel K.</cite>
+                    </blockquote>
+                </div>
+                
+                <div class="review">
+                    <blockquote>
+                        <p>"Five stars! The advanced treatment options at HairRevive are unmatched. My hair has never been healthier. Grateful to have found them!"</p>
+                        <cite>- Jessica S.</cite>
+                    </blockquote>
+                    
+                </div>
+                </span>
+        </section>
+
+        <section id="products-section">
+            <span>
+            <div class="product-container">
+                <h2 class="topic products">Our Products</h2>
+                <div class="product">
+                    <img src="product1.png" alt="Product 1" class="imgprdt">
+                    <h3>HairRevive Essential Shampoo</h3>
+                    <p>A nourishing shampoo designed to promote hair health and reduce hair loss. Suitable for all hair types.</p>
+                    <p><strong>Price:</strong> $19.99</p>
+                    <button><a href="#" class="btn btn-primary">Buy Now</a></button>
+                </div>
+                
+                <div class="product">
+                    <img src="product2.png" alt="Product 2" class="imgprdt">
+                    <h3>HairRevive Intensive Treatment Serum</h3>
+                    <p>An intensive serum enriched with natural ingredients to stimulate hair growth and strengthen follicles.</p>
+                    <p><strong>Price:</strong> $29.99</p>
+                    <button><a href="#" class="btn btn-primary">Buy Now</a></button>
+                </div>
+                
+                <div class="product">
+                    <img src="product3.png" alt="Product 3" class="imgprdt">
+                    <h3>HairRevive Daily Hair Renewal Kit</h3>
+                    <p>A comprehensive kit for daily hair care, including shampoo, conditioner, and revitalizing spray.</p>
+                    <p><strong>Price:</strong> $39.99</p>
+                    <button><a href="#" class="btn btn-primary">Buy Now</a></button>
+                </div>
+                
+                <div class="product">
+                    <img src="product4.png" alt="Product 4" class="imgprdt">
+                    <h3>HairRevive Luxe Hair Oil</h3>
+                    <p>An indulgent hair oil that nourishes, hydrates, and adds a natural shine to your hair.</p>
+                    <p><strong>Price:</strong> $24.99</p>
+                    <button><a href="#" class="btn btn-primary">Buy Now</a></button>
+                </div>
+                
+                <div class="product">
+                    <img src="prdct5.png" alt="Product 5" class="imgprdt" id="prdct5">
+                    <h3>HairRevive Repair & Protect Mask</h3>
+                    <p>A deep-conditioning mask that repairs damaged hair and provides long-lasting protection.</p>
+                    <p><strong>Price:</strong> $34.99</p>
+                    <button><a href="#" class="btn btn-primary">Buy Now</a></button>
+                </div>
+            </div>
+        </span>
+        </section>
+    </main>
+
+    <footer>
+        <img src="WhatsApp Image 2024-01-14 at 12.14.10 AM.jpeg" alt="100% Cousomer Satisfaction Logo" class="ftrimg">
+        <div class="footer-container" id="contact-section">
+            <div class="contact-info">
+                <p>Email: hairfallheadache@example.com</p><br>
+                <p>Phone: +1 (123) 456-7890</p><br>
+                <p>Address: 12 New Road ,Navapura, Bharat</p>
+            </div>
+            <div class="social-icons">
+                <h4>Concat-us On Social Media : </h4> 
+                <label for="twt">Twitter :</label>
+                <i id="twt" class="fa-brands fa-x-twitter"></i>
+                 <label for="fb">FaceBook :</label> 
+                <i id="fb" class="fa-brands fa-facebook"></i>
+                <label for="insta">Instagram :</label>
+                <i id="insta" class="fa-brands fa-instagram"></i>
+                <!-- Add more social icons as needed// -->
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
