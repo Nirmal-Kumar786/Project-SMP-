@@ -294,15 +294,14 @@ button{
 }
 
 footer {
-    display: flex;
+    /* display: flex; */
     height: auto;
     width: 100%;
     line-height: 25px;
-    background-color: #314E70;
-    /* background:linear-gradient(45deg,#ffd1bf,#f8ffd6,#ffd7cd); */
+    background-color:  #1A237E;
 }
-
 footer p {
+    color: wheat;
     display: inline-block;
 }
 
@@ -311,10 +310,13 @@ footer p {
 }
 .social-icons  h4 {
     display: inline;
+    margin: -100px 20px auto 320px;
+    position: absolute;
 }
 
-.social-icons i {
-    margin: 10px ;
+.social-icons #twt {
+    margin: 10px  10px 10px 10px ;
+    color: #4CAF50;
     display: inline;
 }
 
@@ -581,7 +583,7 @@ i {
     </main>
 
     <footer>
-        <img src="WhatsApp Image 2024-01-14 at 12.14.10 AM.jpeg" alt="100% Cousomer Satisfaction Logo" class="ftrimg">
+        <img src="WhatsApp Image 2024-01-14 at 12.14.10 AM.jpeg.jpg" alt="100% Cousomer Satisfaction Logo" class="ftrimg">
         <div class="footer-container" id="contact-section">
             <div class="contact-info">
                 <p>Email: hairfallheadache@example.com</p><br>
@@ -590,12 +592,19 @@ i {
             </div>
             <div class="social-icons">
                 <h4>Concat-us On Social Media : </h4> 
+                <div class="twt">
                 <label for="twt">Twitter :</label>
                 <i id="twt" class="fa-brands fa-x-twitter"></i>
-                 <label for="fb">FaceBook :</label> 
+                </div>
+                <div class="fb">
+                <label for="fb">FaceBook :</label> 
                 <i id="fb" class="fa-brands fa-facebook"></i>
+                </div>
+                <div class="insta">
                 <label for="insta">Instagram :</label>
                 <i id="insta" class="fa-brands fa-instagram"></i>
+                </div>
+                
                 <!-- Add more social icons as needed// -->
             </div>
         </div>
